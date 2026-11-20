@@ -1,0 +1,151 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+
+\ifpdftex
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{empty}
+\urlstyle{same}
+
+% Tight single-page margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.65in}
+\addtolength{\textheight}{1.3in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section style without numbers and with clean rules
+\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=1pt, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\begin{document}
+
+%----------- HEADER -----------
+\begin{center}
+  {\Huge \scshape Deepanshu Taikwani} \\ \vspace{2pt}
+  {\large AI Engineer \textbar{} Agentic AI \& Full-Stack Platforms} \\ \vspace{2pt}
+  \small
+  +91 9982082656 $|$
+  \href{mailto:deepanshutaikwani456@gmail.com}{deepanshutaikwani456@gmail.com} $|$
+  \href{https://linkedin.com/in/deepanshutaikwani}{linkedin.com/in/deepanshutaikwani} $|$
+  \href{https://github.com/deepanshutaikwani456-dt}{github.com/deepanshutaikwani456-dt} $|$
+  \href{https://deepanshu-acog.github.io}{deepanshu-acog.github.io}
+\end{center}
+
+%----------- SUMMARY -----------
+\section{Professional Summary}
+\small
+Full-spectrum AI Engineer with 2.5+ years of experience architecting production multi-agent LLM systems, scalable data platforms, and high-performance healthcare/biopharma interfaces. Built an agentic platform orchestrating 13+ complex domain tools with Next.js and Node.js for 60+ scientists across 3+ enterprise biopharma clients, cutting workflow configuration time by 25\%. Developed autonomous research-monitoring agents using Google ADK and Gemini API. Highly proficient across Frontend (React 18, Next.js, TypeScript), Backend (Python, FastAPI, Node.js, REST APIs), AI Tooling (RAG pipelines, vector DBs, prompt engineering, multi-agent frameworks), and end-to-end test automation (Playwright).
+
+%----------- EXPERIENCE -----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Aganitha Cognitive Solutions}{Hyderabad, India}
+  {Junior Agentic AI Developer}{Sept 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{Architected an agentic AI platform using Next.js, Node.js, and a multi-agent LLM system to orchestrate 13+ bioinformatics and healthcare tools, enabling non-engineering scientists to independently run complex multi-step analyses.}
+    \resumeItem{Collaborated with domain scientists to define workflow requirements and validate outputs, driving adoption among 60+ active users across 3+ biopharma enterprise clients and reducing manual workflow configuration time by 25\%.}
+    \resumeItem{Built a ``Create Micro-app'' feature that automatically transforms LLM-generated research reports into interactive MDX dashboards, cutting dashboard creation time from hours to minutes across 3+ client organizations.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Aganitha Cognitive Solutions}{Hyderabad, India}
+  {Junior Web Developer}{Sept 2024 -- Aug 2025}
+  \resumeItemListStart
+    \resumeItem{Solely designed and developed the end-to-end frontend of DBTIPS, an enterprise bioinformatics SaaS platform (React 18, TypeScript, Vite) serving internal R\&D teams and global pharma clients across drug pipeline, patent, and patient dataset modules, handling 50,000+ records.}
+    \resumeItem{Applied React.lazy, Suspense, and code-splitting across 30+ components to achieve a 70\% bundle size reduction and 50\% faster FCP, bringing page load times to sub-500 ms across data-heavy healthcare modules.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Aganitha Cognitive Solutions}{Hyderabad, India}
+  {Web Developer Intern}{Jan 2024 -- Aug 2024}
+  \resumeItemListStart
+    \resumeItem{Designed and owned ACE (Enzyme Characterization \& Optimization Platform) end-to-end, from Figma wireframes to a production React frontend supporting multiple deep learning bioinformatics modules.}
+    \resumeItem{Wrote automated end-to-end test suites using Playwright and JavaScript covering critical user workflows in React.js applications.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- PROJECTS -----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Transformer Engine: GPT from Scratch} $|$ \href{https://github.com/deepanshutaikwani456-dt/transformer-engine}{\underline{GitHub}} $|$ \emph{PyTorch, Apple Silicon MPS, Python}}{Oct 2026 -- Nov 2026}
+    \resumeItemListStart
+      \resumeItem{Engineered a modular, decoder-only Transformer from first principles in pure PyTorch following Andrej Karpathy's architecture, scaling cross-entropy loss down from 2.46 (Bigram baseline) to 1.61 on Tiny Shakespeare.}
+      \resumeItem{Implemented Causal Multi-Head Self-Attention ($Q, K, V$ projections with causal masking), Pre-LN residual connections, and position-wise feed-forward networks accelerated via Apple Silicon MPS.}
+      \resumeItem{Built interactive inference and generation tooling featuring stochastic nucleus (Top-P) and Top-K sampling, temperature scaling, and real-time in-terminal ASCII attention heatmaps.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{BioWatch: Autonomous Biopharma Agent} $|$ \emph{Python, Google ADK, Gemini, FastAPI, Celery, Redis}}{Nov 2025 -- Jan 2026}
+    \resumeItemListStart
+      \resumeItem{Built an autonomous biopharma research-monitoring agent using Google ADK and the Gemini API that interprets natural-language queries, retrieves academic literature and clinical news, and generates structured MDX reports with citations.}
+      \resumeItem{Designed a multi-step LLM pipeline for intent parsing, query refinement, and validation, optimizing RAG retrieval accuracy and eliminating noisy hallucinations.}
+      \resumeItem{Developed a subscription-based monitoring system with scheduled execution using Celery and Redis, enabling automated research tracking and real-time notifications via Google Chat.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- TECHNICAL SKILLS -----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{AI \& GenAI Tooling}{: Agentic Workflows, Multi-Agent Systems, LLM Orchestration, Tool Calling, RAG Pipelines, Prompt Engineering, Vector Databases (ChromaDB), Embeddings, Google ADK, Gemini API, BAML, LLM Integration, PyTorch Internals} \\
+    \textbf{Frontend Engineering}{: React.js 18, Next.js, TypeScript, JavaScript, Tailwind CSS, shadcn/ui, Vite, React Query, Zustand, Responsive UI} \\
+    \textbf{Backend \& Microservices}{: Python, FastAPI, Node.js, Express.js, RESTful APIs, GraphQL, SSE Streaming, WebSockets, Microservices} \\
+    \textbf{Databases \& Data}{: PostgreSQL, MySQL, MongoDB, Redis, Vector Databases (ChromaDB), Data Pipelines, SQL Querying} \\
+    \textbf{DevOps, MLOps \& Testing}{: Docker, AWS, Nginx, Git/GitHub, GitHub Actions (CI/CD), Playwright (E2E Test Automation), Linux, Agile/Scrum}
+  }}
+\end{itemize}
+\vspace{-6pt}
+
+%----------- EDUCATION -----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Hyderabad}{Hyderabad, Telangana}
+    {Master of Computer Applications (MCA), GPA: 8.4/10}{Nov 2022 -- May 2024}
+\resumeSubHeadingListEnd
+
+\end{document}
